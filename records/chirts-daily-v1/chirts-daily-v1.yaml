@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=../../spec/schemas/profiles/cdh.schema.json
+"$schema": https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.2.0/schemas/profiles/cdh.schema.json
+cdh_schema_version: v0.2.0
+extensions:
+  - https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.2.0/extensions/cdh/schema.json
+id: chirts-daily-v1
+title: "CHIRTS-daily: Global Daily Maximum and Minimum Temperature"
+series:
+  name: CHIRTS
+  url: https://www.chc.ucsb.edu/data/chirts
+description: >-
+  CHIRTS-daily provides global, daily estimates of maximum (tmax) and minimum (tmin) 2-meter air
+  temperature at 0.05° resolution (~5 km). It blends infrared satellite observations with in-situ
+  station data using a modified version of the CHIRPS algorithm. The dataset spans 1983-present with
+  daily temporal resolution, supporting climate monitoring, agricultural modeling, and heat-stress
+  studies.
+license: CC-BY-4.0
+resource_type: dataset
+keywords:
+  - temperature
+  - daily
+  - tmax
+  - tmin
+  - global
+  - climate
+  - infrared
+  - stations
+contact:
+  - organization: University of California, Santa Barbara
+    roles:
+      - licensor
+citation:
+  authors:
+    - Funk
+    - Chris
+    - Verdin
+    - Andrew
+    - Peterson
+    - Pete
+    - Shukla
+    - Shraddhanand
+    - Harrison
+    - Laura
+    - Davenport
+    - Frank
+    - Michaelsen
+    - Joel
+  date: "2023"
+  title: "CHIRTS-daily: Global Daily Maximum and Minimum Temperature"
+  publisher: Climate Hazards Center, UC Santa Barbara
+  url: https://data.chc.ucsb.edu/products/CHIRTSdaily/
+doi: 10.1038/s41597-020-00643-7
+created: "2026-07-29"
+updated: "2026-07-29"
+spatial:
+  bbox:
+    - -180
+    - -60
+    - 180
+    - 90
+  crs: EPSG:4326
+  resolution:
+    - type: xy
+      value: 0.05
+      unit: degrees
+      label: ~5 km at equator
+cdh:
+  domain:
+    - agricultural-production
+    - climate
+data:
+  - name: tif
+    locations:
+      - url: https://data.chc.ucsb.edu/products/CHIRTSdaily
+        title: HTTPS
+    media_type: image/tiff; application=geotiff
